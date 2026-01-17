@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align: center; font-family: Arial; padding: 50px;">
+    <h1>News Legitimacy Checker 🕵️</h1>
+    <form action="/analyze" method="POST">
+        <input type="text" name="headline" placeholder="I-paste ang headline dito..." style="width: 70%; padding: 10px;">
+        <button type="submit" style="padding: 10px;">Suriin</button>
+    </form>
+    {% if result %}
+        <div style="margin-top: 30px; padding: 20px; border: 2px solid {{color}};">
+            <p>Sinusuri: <b>"{{ headline }}"</b></p>
+            <h2 style="color: {{color}};">{{ result }}</h2>
+        </div>
+    {% endif %}
+</body>
+</html>
